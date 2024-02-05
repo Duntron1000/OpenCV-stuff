@@ -13,7 +13,7 @@ while(True):
 
     hsv = cv.cvtColor(src, cv.COLOR_BGR2HSV)
     # mask = cv.inRange(hsv, (0, 150, 140), (12, 255, 255)) old hsv
-    mask = cv.inRange(hsv, (0, 33, 173), (9, 255, 255))
+    mask = cv.inRange(hsv, (0, 196, 192), (10, 255, 255))
     mask = cv.morphologyEx(mask, cv.MORPH_CLOSE, (11, 11), iterations=10)
     cv.imshow("mask", mask)
     # masked = cv.bitwise_and(src, src, mask=mask)
