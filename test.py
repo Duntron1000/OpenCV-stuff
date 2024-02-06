@@ -5,7 +5,6 @@ def nothing(x):
     pass
  
 # Open the camera
-cap = cv2.VideoCapture(0) 
  
 # Create a window
 cv2.namedWindow('image')
@@ -21,7 +20,8 @@ cv2.createTrackbar('lowV','image',0,255,nothing)
 cv2.createTrackbar('highV','image',255,255,nothing)
  
 while(True):
-    ret, frame = cap.read()
+
+    frame = cv2.imread('Photos/betterNote.png')
  
     # get current positions of the trackbars
     ilowH = cv2.getTrackbarPos('lowH', 'image')
